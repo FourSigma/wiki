@@ -3,11 +3,13 @@ Command line tool to get Wikipedia summaries written in Golang.
 
 
 #Usage 
-```Usage: wiki 
+```
+Usage: wiki 
 Example: wiki python
 ```
 #Examples
-```$ ./wiki Eros
+```
+$ ./wiki Eros
 
  Eros
 
