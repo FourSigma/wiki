@@ -13,6 +13,7 @@ Usage: wiki <query>
 Example: wiki python
 ```
 #Examples
+i<iframe src="http://showterm.io/b8d3152260d56e4587757#fast" width="640" height="480"></iframe>
 ```
 $ ./wiki Eros
 
