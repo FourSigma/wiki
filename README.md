@@ -28,3 +28,4 @@ The language was announced in November 2009 and is now used in some of Google's 
 * Increase to more than one word [DONE]
 * Better formatting of output 
 * Search Feature 
+* More error checking 
