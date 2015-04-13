@@ -1,10 +1,11 @@
 # wiki
 Command line tool to get Wikipedia summaries written in Golang.
 
+Credit: Adapted from PHP version - thedouglenz (https://gist.github.com/thedouglenz/193defdb711e0e54d68a)
 
 #Usage 
 ```
-Usage: wiki 
+Usage: wiki <query> 
 Example: wiki python
 ```
 #Examples
