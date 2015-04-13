@@ -11,17 +11,22 @@ import (
 
 func main() {
 
+	var query string
 	//Checks for right number of command line arguments
-	if len(os.Args) != 2 {
+	if len(os.Args) < 2 {
 		fmt.Println("Usage: wiki <query> ")
 		fmt.Println("Example: wiki python")
 		return
+	} else if len(os.Args) == 2 {
+		query = os.Args[1]
+	} else {
+		args := os.Args[1:]
+		query = strings.Join(args, "_")
 	}
-
-	query := os.Args[1]
 
 	//API Calls
 	url := "https://en.wikipedia.org/w/api.php?continue=&action=query&titles=placeholder&prop=extracts&exintro=&explaintext=&format=json&redirects"
+
 	url = strings.Replace(url, "placeholder", query, -1)
 	r, _ := http.Get(url)
 	defer r.Body.Close()
