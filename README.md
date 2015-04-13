@@ -3,6 +3,10 @@ Command line tool to get Wikipedia summaries written in Golang.
 
 Credit: Adapted from PHP version - thedouglenz (https://gist.github.com/thedouglenz/193defdb711e0e54d68a)
 
+#Install
+```
+$ go get github.com/sindbis/wiki
+```
 #Usage 
 ```
 Usage: wiki <query> 
