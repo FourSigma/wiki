@@ -25,6 +25,6 @@ $ ./wiki golang
 The language was announced in November 2009 and is now used in some of Google's production systems. Go's "gc" compiler targets the Linux, Mac OS X, FreeBSD, NetBSD, OpenBSD, Plan 9, and Microsoft Windows operating systems and the i386, amd64, ARM and IBM POWER processor architectures. A second compiler, gccgo, is a GCC frontend.
 ```
 #TODO 
-~ Increase to more than one word
-~ Better formatting of output 
-~ Search Feature 
+* Increase to more than one word
+* Better formatting of output 
+* Search Feature 
