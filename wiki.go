@@ -12,17 +12,7 @@ import (
 //Takes in url string and returns JSON of wiki summary
 func getSummary(url string) map[string]interface{} {
 
-	r, err := http.Get(url)
-	if err != nil {
-		panic(err)
-	}
-	defer r.Body.Close()
-
-	//Get the body of the request
-	body, err := ioutil.ReadAll(r.Body)
-	if err != nil {
-		panic(err)
-	}
+	body := getBody(url)
 
 	//Loads JSON into the gabs Parser
 	jsonParsed, err := gabs.ParseJSON(body)
@@ -41,6 +31,26 @@ func getSummary(url string) map[string]interface{} {
 	data := child.(map[string]interface{})
 
 	return data
+}
+
+//Gets the body of the URL
+func getBody(url string) []byte {
+
+	//Get the request URL
+	r, err := http.Get(url)
+	if err != nil {
+		panic(err)
+	}
+
+	defer r.Body.Close()
+
+	//Parse the body of the request
+	body, err := ioutil.ReadAll(r.Body)
+	if err != nil {
+		panic(err)
+	}
+
+	return body
 }
 
 func main() {
