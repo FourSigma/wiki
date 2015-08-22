@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/jeffail/gabs"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/jeffail/gabs"
 )
 
 //Takes in url string and returns JSON of wiki summary
@@ -71,9 +72,7 @@ func main() {
 
 	//API Calls
 	url := "https://en.wikipedia.org/w/api.php?continue=&action=query&titles=placeholder&prop=extracts&exintro=&explaintext=&format=json&redirects"
-
 	url = strings.Replace(url, "placeholder", query, -1)
-
 	data := getSummary(url)
 
 	//Output to terminal
